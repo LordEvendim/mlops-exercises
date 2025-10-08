@@ -6,6 +6,7 @@ from pydantic import field_validator
 class Settings(BaseSettings):
     ENVIRONMENT: str
     APP_NAME: str
+    EXAMPLE_API_KEY: str
 
     @field_validator("ENVIRONMENT")
     @classmethod
