@@ -5,15 +5,7 @@ from dotenv import load_dotenv
 from settings import Settings
 
 
-def export_envs(environment: str = "dev") -> None:
-    # ...  # implement me!
-    # print(environment)
-    env_file = f".env.{environment}"
-    if os.path.exists(env_file):
-        load_dotenv(env_file)
-    else:
-        raise ValueError(f"{env_file} does not exist")
-
+def export_secrets() -> None:
     secrets_path = "secrets.yaml"
 
     with open(secrets_path, "r", encoding="utf-8") as secrets_file:
@@ -21,6 +13,17 @@ def export_envs(environment: str = "dev") -> None:
 
     for key, value in data.items():
         os.environ[key] = value
+
+
+def export_envs(environment: str = "dev") -> None:
+    # implement me!
+    env_file = f".env.{environment}"
+    if os.path.exists(env_file):
+        load_dotenv(env_file)
+    else:
+        raise ValueError(f"{env_file} does not exist")
+
+    export_secrets()
 
 
 if __name__ == "__main__":
