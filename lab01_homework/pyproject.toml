@@ -1,0 +1,19 @@
+[project]
+name = "lab01-homework"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "clean-text>=0.6.0",
+    "joblib>=1.5.2",
+    "pre-commit>=4.3.0",
+    "torch>=2.8.0",
+    "torchvision>=0.23.0",
+    "transformers>=4.57.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+]
