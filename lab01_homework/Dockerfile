@@ -1,7 +1,7 @@
 # Dockerfile
 
 # Use a minimal Python image as the base
-FROM python:3.12-slim
+FROM python:3.12-slim-bookworm
 
 # Set the working directory in the container
 WORKDIR /app
@@ -19,7 +19,7 @@ ENV PATH="/root/.local/bin:${PATH}"
 COPY pyproject.toml uv.lock ./
 
 # Install project dependencies using uv
-RUN uv sync
+RUN uv sync --no-dev
 
 # Copy the rest of the application code
 COPY . .
