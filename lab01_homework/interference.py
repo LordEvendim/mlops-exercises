@@ -5,7 +5,7 @@ from sentence_transformers import SentenceTransformer
 MODEL_PATH = Path("ai_models/classifier.joblib")
 SENTENCE_TRANSFORMER_PATH = "ai_models/sentence_transformer.model"
 
-SENTIMENT_TO_LABEL = {0: "negative", 1: "neutral", 2: "postive"}
+SENTIMENT_TO_LABEL = {0: "negative", 1: "neutral", 2: "positive"}
 
 
 def load_models(
