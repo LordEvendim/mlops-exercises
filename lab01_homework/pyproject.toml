@@ -12,7 +12,6 @@ dependencies = [
     "pre-commit>=4.3.0",
     "sentence-transformers>=5.1.1",
     "torch>=2.8.0",
-    "torchvision>=0.23.0",
     "transformers>=4.57.0",
     "uvicorn>=0.37.0",
 ]

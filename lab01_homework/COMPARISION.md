@@ -3,12 +3,12 @@
 ### Unoptimized
 
 - Python 3.12
-- 9.94 GB
+- 8.28 GB
 
 ### Optimized
 
 - Python 3.12 slim-bookworm
-- 9.25GB
+- 7.53GB
 
 Dockerfiles ended up being pretty big. After some investigation it turned out that the main reason behind it is a significant size of the .venv folder.
 Here is a layer breakdown from Docker Desktop of the optimized Dockerfile with size of every non-zero individual layer:
@@ -20,7 +20,7 @@ Here is a layer breakdown from Docker Desktop of the optimized Dockerfile with s
 | RUN /bin/sh -c set -eux; savedAptMark="...             | 40.22 MB  |
 | RUN /bin/sh -c set -eux                                | 36 B      |
 | RUN /bin/sh -c apt-get update                          | 294.65 MB |
-| COPY /app/.venv /app/.venv                             | 7.04 GB   |
-| COPY . .                                               | 1.79 GB   |
+| COPY /app/.venv /app/.venv                             | 7.02 GB   |
+| COPY . .                                               | 92.48 MB  |
 
 We can see the significant difference between unoptimized and optimized images, however they are still pretty big.
