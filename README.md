@@ -25,8 +25,16 @@ pre-commit run
 ```bash
 docker build [--no-cache] -t ml-app .
 
-docker compose up
+docker compose up [--detach]
 docker compose down
+
+docker compose ps
+```
+
+### Postgres
+
+```bash
+psql --host localhost --username postgres --file data/services_table.sql
 ```
 
 ### Others

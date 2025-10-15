@@ -1,3 +1,4 @@
+.vscode
 .*_cache
 
 **/ai_models
