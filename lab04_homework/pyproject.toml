@@ -1,0 +1,19 @@
+[project]
+name = "lab04-homework"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=7.1.0",
+    "ipywidgets>=8.1.7",
+    "joblib>=1.5.2",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.7",
+    "pgvector>=0.4.1",
+    "polars>=1.35.1",
+    "psycopg[binary]>=3.2.12",
+    "sentence-transformers>=5.1.2",
+    "sqlalchemy>=2.0.44",
+    "widgetsnbextension>=4.0.14",
+]
