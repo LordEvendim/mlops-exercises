@@ -1,5 +1,5 @@
 [project]
-name = "MLOps_course_AGH_lab_06"
+name = "MLOps_course_AGH_lab_06_homework"
 version = "1.0.0"
 description = ""
 readme = "README.md"
@@ -9,7 +9,7 @@ requires-python = "==3.11.*"
 dependencies = [
     "captum",
     "cleanlab",
-    "datasets",
+    "datasets==3.6.0",
     "giskard",
     "jupyter",
     "matplotlib",
