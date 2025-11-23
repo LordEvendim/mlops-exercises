@@ -23,12 +23,16 @@ pre-commit run
 ### Docker
 
 ```bash
-docker build [--no-cache] -t ml-app .
+docker build [-f optimized.Dockerfile] [--no-cache] -t ml-app .
 
 docker compose up [--detach]
 docker compose down
 
 docker compose ps
+
+docker run ml-app
+
+docker images
 ```
 
 ### Postgres
