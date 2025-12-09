@@ -1,10 +1,11 @@
 [project]
-name = "lab01-homework"
+name = "lab09-labs"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "boto3>=1.42.5",
     "clean-text>=0.6.0",
     "fastapi>=0.119.0",
     "httpx>=0.28.1",
@@ -20,3 +21,11 @@ dependencies = [
 dev = [
     "pytest>=8.4.2",
 ]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
